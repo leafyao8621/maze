@@ -5,7 +5,7 @@ Creates and solves mazes
 File Formats:
 * `.maze` maze representation
 * `.path` path of solution
-* `solution` solution representation
+* `.solution` solution representation
 
 To build:
 
