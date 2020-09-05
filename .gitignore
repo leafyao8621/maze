@@ -1,0 +1,5 @@
+maze/*.maze
+path/*.path
+solution/*.solution
+src/*/*.o
+maze_solver
