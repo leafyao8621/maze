@@ -24,10 +24,10 @@ int main(int argc, const char **argv) {
             printf("Cannot open %s\n", argv[4]);
             return 2;
         }
-        int ret = generator_generate_file(row, column, fmaze);
+        int ret = generator_generate_file(column, row, fmaze);
         fclose(fmaze);
         if (ret) {
-            puts(ret == 1 ? "Allocation error" : "No solution");
+            puts("Allocation error");
             return 3;
         }
         FILE *fmaze_in = fopen(argv[3], "r");

@@ -25,10 +25,10 @@ int solver_solve_memory(unsigned long long column,
     unsigned long long c = 0;
     unsigned char *cur = buf;
     for (; c < column && !*cur; ++c, ++cur);
-    if (c == column) {
+    unsigned char **queue = malloc(sizeof(unsigned char*) * column * row);
+    if (!queue) {
         return 1;
     }
-    unsigned char **queue = malloc(sizeof(unsigned char*) * column * row);
     unsigned char **queue_end = queue;
     unsigned long long queue_len = 0;
     unsigned long long offset = 0;
